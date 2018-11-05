@@ -30,7 +30,7 @@
 					</div>
 			</div>
 		</div>
-		<div class="footer">
+		<div class="footer"> 
 			<p>
 				<span>版权所有：浙ICP备18021754号</span>
 				<span><a href="" target="_blank">www.shongfei.top</a></span> 
