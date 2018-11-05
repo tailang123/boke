@@ -32,7 +32,7 @@
 		</div>
 		<div class="footer">
 			<p>
-				<span>&copy; 2018</span>
+				<span>版权所有：浙ICP备18021754号</span>
 				<span><a href="" target="_blank">www.shongfei.top</a></span> 
 			</p>
 			<p><span>人生就是一场修行</span></p>

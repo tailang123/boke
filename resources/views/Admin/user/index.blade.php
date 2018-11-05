@@ -154,7 +154,6 @@
                 success:function(data){
                     if(data.status == 1){
                         layer.msg(data.msg,{icon:1});
-                        $(this).parents('tr').remove();
                     }else{
                         layer.msg(data.msg,{icon:5});
                     }
