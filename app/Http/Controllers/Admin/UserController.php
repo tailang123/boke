@@ -44,11 +44,13 @@ class UserController extends Controller
             return ['status' => 0, 'msg' => $errors->first()];
         }
         try{
+
             Admin::create([
                 'name' => $input['name'],
                 'password' => bcrypt($input['pass']),
             ]);
         }catch(\Exception $e){
+            
             return ['status' => 0, 'msg'=>$e->getMessage()];
         }
         return ['status' => 1, 'msg' => '添加成功'];

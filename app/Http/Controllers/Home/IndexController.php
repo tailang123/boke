@@ -9,9 +9,13 @@ use App\Model\Admin\Articel;
 class IndexController extends Controller
 {
     //前台首页
-    public function index()
+    public function index(Request $request)
     {
-        $articels = Articel::paginate(3);
+        if($request->has('title')){
+            $articels = Articel::where('title','like','%'.$request->title.'%')->paginate(3);
+        }else{
+            $articels = Articel::paginate(3);
+        }
         return view('Home.index',[
             'articels' =>$articels
         ]);

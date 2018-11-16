@@ -22,7 +22,7 @@
 						<span style="color:white; ">HongFei.Sun博客</span>
 					</a>
 				</h4>
-				<form class="layui-form blog-seach pull-left" action="">
+				<form class="layui-form blog-seach pull-left" action="{{url('/')}}">
 					<div class="layui-form-item blog-sewrap">
 					    <div class="layui-input-block blog-sebox">
 					      <i class="layui-icon layui-icon-search"></i>
@@ -56,7 +56,13 @@
 			</ul>
 		</div>
 		@yield('content')
-		
+		<div class="footer"> 
+			<p>
+				<span>版权所有：浙ICP备18021754号</span>
+				<span><a href="" target="_blank">www.shongfei.top</a></span> 
+			</p>
+			<p><span>人生就是一场修行</span></p>
+		</div>
 	<script src="{{asset('hhome/layui/layui.js')}}"></script>
 	<script>
 		layui.config({

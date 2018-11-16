@@ -11,30 +11,24 @@
 						</h4>
 						@foreach($articels as $articel)
 						<div class="item">
-							<div class="item-box  layer-photos-demo1 layer-photos-demo">
-								<h3><a href="#">{{$articel->title}}</a></h3>
-								<h5>发布于：<span>刚刚</span></h5>
+							<div class="item-box  layer-photos-demo1 layer-photos-demo" >
+								<h3><a href="{{url('detial/'.$articel->id)}}">{{$articel->title}}</a></h3>
+								<h5>发布于：<span>{{$articel->created_at}}</span></h5>
 								{!!$articel->content!!}
 							</div>
 							<div class="comment count">
-								<a href="#">评论</a>
-								<a href="javascript:;" class="like">点赞</a>
+								<a href="{{url('detial/'.$articel->id)}}">评论</a>
+								<a href="{{url('detial/'.$articel->id)}}">查看</a>
+								<!-- <a href="javascript:;" class="like">点赞</a> -->
 							</div>
 						</div>
 						@endforeach
 					</div>
-
 						<center>
 							{{ $articels->links() }}
 						</center>
 					</div>
 			</div>
 		</div>
-		<div class="footer"> 
-			<p>
-				<span>版权所有：浙ICP备18021754号</span>
-				<span><a href="" target="_blank">www.shongfei.top</a></span> 
-			</p>
-			<p><span>人生就是一场修行</span></p>
-		</div>
+		
 @endsection

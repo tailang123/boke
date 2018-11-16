@@ -68,6 +68,14 @@ Route::group(['namespace'=>'Home'],function(){
     Route::post('/', 'ReleaseController@store');
     // 关于页
     Route::get('/about','AboutController@index');
+
+    // 详情页
+    Route::group(['prefix'=>'detial'],function(){
+        // 详情页
+        Route::get('/{id}','DetialController@index');
+        // 评论操作
+        Route::post('/{id}','DetialController@create');
+    });
 });
 
 
