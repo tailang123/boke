@@ -44,7 +44,6 @@ class UserController extends Controller
             return ['status' => 0, 'msg' => $errors->first()];
         }
         try{
-
             Admin::create([
                 'name' => $input['name'],
                 'password' => bcrypt($input['pass']),

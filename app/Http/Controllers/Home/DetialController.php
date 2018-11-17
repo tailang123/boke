@@ -21,7 +21,7 @@ class DetialController extends Controller
             'read' => $articel->read + 1
         ]);
         return view('Home.detial.index',[
-            'articel' => $artel,
+            'articel' => $articel,
             'detial' => $detial
         ]);
     }
