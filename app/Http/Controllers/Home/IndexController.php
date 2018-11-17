@@ -11,6 +11,9 @@ class IndexController extends Controller
     //前台首页
     public function index(Request $request)
     {
+     
+        $ip = $request->getClientIp();
+        dd($ip);
         if($request->has('title')){
             $articels = Articel::where('title','like','%'.$request->title.'%')->orderBy('id','desc')->paginate(3);
         }else{

@@ -13,6 +13,7 @@ class DetialController extends Controller
     // 详情页
     public function index($id)
     {
+        
         $articel = Articel::find($id);
         $detial = Detial::where('articel_id',$id)->get();
         
@@ -48,6 +49,6 @@ class DetialController extends Controller
         }catch(\Exception $e){
             return ['status'=>0,'message'=>$e->getMessage()];
         }
-        return ['status'=>1,''=>'评论成功'];
+        return ['status'=>1,'message'=>'评论成功'];
     }
 }
