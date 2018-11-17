@@ -55,6 +55,11 @@ Route::group(['namespace'=>'Admin','prefix'=>'aadmin'],function(){
         // 文章修改操作
         Route::put('/{id}','ArticelController@update');
     });
+
+    Route::group(['prefix'=>'ip','middleware'=>'login'],function(){
+        // ip 列表页
+        Route::get('/','IpController@index');
+    });
 });
 
 // 前台

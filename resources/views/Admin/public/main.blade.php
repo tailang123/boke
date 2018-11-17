@@ -14,6 +14,12 @@
                             <cite>会员列表</cite>
                         </a>
                     </li >
+                    <li>
+                        <a _href="{{url('aadmin/ip')}}">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>IP列表</cite>
+                        </a>
+                    </li >
                     <!-- <li>
                         <a href="javascript:;">
                             <i class="iconfont">&#xe70b;</i>
