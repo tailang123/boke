@@ -145,13 +145,16 @@
             $.ajax({
                 type:'DELETE',
                 data:{id:id},
-                url:'{{url("aadmin/user")."/"}}'+id,
+                url:'{{url("aadmin/ip").'/'}}'+id,
                 dataType:'JSON',
                 success:function(data){
                     if(data.status == 1){
-                        layer.msg(data.msg,{icon:1});
+                        layer.msg('删除成功',{icon:1});
+                        setTimeout(function(){
+                            location.reload();
+                        },800)
                     }else{
-                        layer.msg(data.msg,{icon:5});
+                        layer.msg('删除失败',{icon:5});
                     }
                 }
             })

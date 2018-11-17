@@ -18,4 +18,15 @@ class IpController extends Controller
             'count' => $count
         ]);
     }
+
+    // 删除ip
+    public function destroy($id)
+    {
+        try{
+            Ip::destroy($id);
+        }catch(\Exception $e){
+            return ['status'=>0];
+        }
+        return ['status'=>1];
+    }
 }

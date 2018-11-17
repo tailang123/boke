@@ -59,6 +59,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'aadmin'],function(){
     Route::group(['prefix'=>'ip','middleware'=>'login'],function(){
         // ip 列表页
         Route::get('/','IpController@index');
+        // 删除ip
+        Route::delete('/{id}','IpController@destroy');
     });
 });
 
