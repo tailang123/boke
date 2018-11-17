@@ -20,24 +20,25 @@ class DetialController extends Controller
             'read' => $articel->read + 1
         ]);
         return view('Home.detial.index',[
-            'articel' => $articel,
+            'articel' => $artel,
             'detial' => $detial
         ]);
     }
     
     // 评论操作
-    public function create(Request $request,$id)
+    public function create( $request,$id)
     {
-        $input = $request->toArray();
+        $input = $request->all();
         $messages = [
             'content.required' => '不能为空'
         ];
-        $validator = Validator::make($input, [
-            'content' => 'required',
+        $validator = Validatormake($input, [
+            'content' => 'required'
         ], $messages);
-        if ($validator->fails()) {
+        if ($validator->fails) {
             $errors = $validator->errors();
-            return ['status' => 0, 'msg' => $errors->first()];
+
+            return ['status', 'msg' => $errors->first()];
         }
         try{
             Detial::create([
@@ -47,6 +48,6 @@ class DetialController extends Controller
         }catch(\Exception $e){
             return ['status'=>0,'message'=>$e->getMessage()];
         }
-        return ['status'=>1,'message'=>'评论成功'];
+        return ['status'=>1,''=>'评论成功'];
     }
 }

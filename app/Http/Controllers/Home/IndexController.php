@@ -16,10 +16,9 @@ class IndexController extends Controller
         }else{
             $articels = Articel::orderBy('id','desc')->paginate(3);
         }
+
         return view('Home.index',[
             'articels' =>$articels
         ]);
     }
-
-
 }
