@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Home;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Admin\Articel;
-use App\Model\Home\Ip;
+use App\Model\Admin\Ip;
 
 class IndexController extends Controller
 {
