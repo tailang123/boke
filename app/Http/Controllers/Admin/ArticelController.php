@@ -99,4 +99,15 @@ class ArticelController extends Controller
         }
         return ['status' => 1, 'message' => '修改文章成功'];
     }
+
+    // 文章删除操作
+    public function destroy($id)
+    {
+        try{
+            Articel::destroy($id); 
+        }catch(\Exception $e){
+            return ['status' => 0];
+        }
+        return ['status' => 1];
+    }
 }

@@ -84,7 +84,7 @@
               <a title="编辑" href="{{url('aadmin/articel/'.$articel->id.'/edit')}}">
                 <i class="layui-icon">&#xe63c;</i>
               </a>
-              <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+              <a title="删除" class="del" href="javascript:;" data-id="{{$articel->id}}">
                 <i class="layui-icon">&#xe640;</i>
               </a>
             </td>
@@ -145,7 +145,25 @@
           });
       }
 
+      $('.del').click(function(){
+        var id = $(this).attr('data-id');
+          layer.confirm('确认要删除吗?',function(){
+            $.ajax({
+              url:"{{url('aadmin/articel').'/'}}"+id,
+              type:'DELETE',
+              dataType:'JSON',
+              success:function(data){
+                if(data.status == 1){
+                  layer.msg('删除成功',{icon:1});
+                  location.reload();
+                }else{
+                  layer.msg('删除失败',{icon:5});
+                }
+              }
+            })
 
+          })
+      })
 
       function delAll (argument) {
 

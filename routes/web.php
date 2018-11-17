@@ -54,6 +54,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'aadmin'],function(){
         Route::get('/{id}/edit','ArticelController@edit');
         // 文章修改操作
         Route::put('/{id}','ArticelController@update');
+        // 文章删除操作
+        Route::delete('/{id}','ArticelController@destroy');
     });
 
     Route::group(['prefix'=>'ip','middleware'=>'login'],function(){
