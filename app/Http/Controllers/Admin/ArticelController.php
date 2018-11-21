@@ -13,7 +13,7 @@ class ArticelController extends Controller
     public function index()
     {
         $count = Articel::count();
-        $articels = Articel::paginate(7);
+        $articels = Articel::orderBy('id','desc')->paginate(7);
         return view('Admin.articel.index',[
             'count' => $count,
             'articels' => $articels

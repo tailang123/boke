@@ -27,5 +27,6 @@ class IndexController extends Controller
             'admin' => $admin,
             'articel' => $articel
         ]); 
+        
     }
 }
