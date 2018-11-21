@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Admin\Articel;
 use Illuminate\Support\Facades\Validator;
-
+use App\Repositories\ArticelRepository;
+use App\Http\Requests\Requests\ArticelRequest;
 class ArticelController extends Controller
 {
+
+    protected $repo;
+
+    public function __construct(ArticelRepository $repo)
+    {
+        $this->repo = $repo;
+    }
+
     // 文章列表页
     public function index()
     {
@@ -29,7 +38,6 @@ class ArticelController extends Controller
     // 文章添加操作
     public function store(Request $request)
     {
-        $input = $request->all();
         $messages = [
             'title.unique' => '标题不能为空',
             'content1.unique' => '文章不能为空'
@@ -42,15 +50,9 @@ class ArticelController extends Controller
             $errors = $validator->errors();
             return ['status' => 0, 'msg' => $errors->first()];
         }
-        try{
-            Articel::create([
-                'title' => $input['title'],
-                'content' => $input['content1']
-            ]);
-        }catch(\Exception $e){
-            return ['status'=>0,'message'=>$e->getMessage()];
-        }
-        return ['status'=>1,'message'=>'文章发布成功'];
+        
+        // 创建数据
+        return $this->repo->create($request);
     }
 
     // 图片添加操作
