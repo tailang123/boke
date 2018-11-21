@@ -5,10 +5,8 @@ use App\Model\Admin\Articel;
 class ArticelRepository
 {
     // 创建文章
-    public function create($request)
+    public function create($input)
     {
-        
-        $input = $request->all();
         try{
             Articel::create([
                 'title' => $input['title'],

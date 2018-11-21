@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Model\Admin\Articel;
 use Illuminate\Support\Facades\Validator;
 use App\Repositories\ArticelRepository;
-use App\Http\Requests\Requests\ArticelRequest;
 class ArticelController extends Controller
 {
 
@@ -38,9 +37,10 @@ class ArticelController extends Controller
     // 文章添加操作
     public function store(Request $request)
     {
+        $input = $request->all();
         $messages = [
-            'title.unique' => '标题不能为空',
-            'content1.unique' => '文章不能为空'
+            'title.required' => '标题不能为空',
+            'content1.required' => '文章不能为空'
         ];
         $validator = Validator::make($input, [
             'title' => 'required',
@@ -50,9 +50,9 @@ class ArticelController extends Controller
             $errors = $validator->errors();
             return ['status' => 0, 'msg' => $errors->first()];
         }
-        
+
         // 创建数据
-        return $this->repo->create($request);
+        return $this->repo->create($input);
     }
 
     // 图片添加操作

@@ -74,12 +74,12 @@
                         data:$('#textForm').serialize(),
                         dateType:'json',
                         success:function(data){
-                            console.log(data);
-                            if(data.status == 1){
-                                layer.msg(data.message, {icon: 1});
+                            if(data.status  == 1){
+                                layer.msg(data.msg, {icon: 1});
                                 location.href="{{url('aadmin/articel/')}}"
                             }else{
-                                layer.msg(data.message,{icon:5})
+                                var arr = new Array();
+                                layer.msg(data.msg,{icon:5})
                             }
                         }
                     })
