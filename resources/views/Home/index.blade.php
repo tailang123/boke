@@ -4,7 +4,7 @@
 			<div class="container">
 					<div class="contar-wrap">
 						<center>
-							{{ $articels->links() }}
+							{{ $articels->links('vendor.pagination.default') }}
 						</center>
 						<h4 class="item-title">
 							<p><i class="layui-icon layui-icon-speaker"></i>公告：<span>欢迎来到HongFei.Sun的轻博客</span></p>

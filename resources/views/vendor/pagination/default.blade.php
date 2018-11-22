@@ -20,7 +20,7 @@
                     @if ($page == $paginator->currentPage())
                         <li class="active" ><span style="z-index:1">{{ $page }}</span></li>
                     @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        <li><a href="{{ $url }}" >{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
