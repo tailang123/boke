@@ -20,6 +20,7 @@ class DetialRepository
     {
         return Articel::find($id);
     }
+
     public function DetialFind($id)
     {
         return Detial::find($id);
@@ -56,6 +57,7 @@ class DetialRepository
         }
         return ['status'=>1,'message'=>'评论成功'];
     }
+
 
     
 }
