@@ -1,6 +1,7 @@
 <?php 
 namespace App\Repositories;
 use App\Model\Admin\Articel;
+use App\Repositories\DetialRepositroy;
 
 class ArticelRepository
 {
