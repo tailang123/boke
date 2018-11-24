@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="{{asset('bootstrap/dist/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('hhome/layui/css/layui.css')}}">
 	<link rel="stylesheet" href="{{asset('hhome/static/css/mian.css')}}">
+	<meta name="baidu-site-verification" content="Y913AzkCGm" />
 	<meta name="csrf-token" content="{{ csrf_token()}}">
 	<script src="{{asset('jquery-3.3.1.min.js')}}"></script>
 	<script src="{{asset('layer\layer\layer.js')}}"></script>
 	<link rel="icon" href="/timg.ico" type="image/x-icon" />
-	
 </head>
 <body class="lay-blog">
 		<div class="header">
