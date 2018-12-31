@@ -13,4 +13,11 @@ class QController extends Controller
         $qc = new \QC();
         $qc->qq_login();
     }
+
+    public function callback()
+    {
+        $qc = new \QC();
+        echo $qc->qq_callback();
+        echo $qc->get_openid();
+    }
 }
