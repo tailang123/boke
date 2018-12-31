@@ -101,7 +101,6 @@ class ArticelController extends Controller
         }
         return ['status' => 1, 'message' => '修改文章成功'];
     }
-
     // 文章删除操作
     public function destroy($id)
     {
@@ -112,4 +111,5 @@ class ArticelController extends Controller
         }
         return ['status' => 1];
     }
+
 }

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Broadcasting\PrivateChannel;
 use App\Model\Admin\Articel;
 use App\Model\Admin\Admin;
+
 class IndexController extends Controller
 {
     // 后台首页

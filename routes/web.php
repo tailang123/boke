@@ -68,6 +68,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'aadmin'],function(){
 
 // 前台
 Route::group(['namespace'=>'Home'],function(){
+    // qq登录
+    Route::get('/mycb','QController@QQLogin');
     // 首页
     Route::get('/','IndexController@index');
 
