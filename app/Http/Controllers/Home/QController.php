@@ -15,12 +15,10 @@ class QController extends Controller
     public function callback()
     {
         $qc = new \QC();
-        $qc = new QC();
         $callbak = $qc->qq_callback();    //返回的验证值
         $openid = $qc->get_openid();        //qq分配的用户id
          
-        $qq = new QC($callbak,$openid);
+        $qq = new \QC($callbak,$openid);
         $result = $qq->get_user_info(); //获取用户信息
-        dump($result);die;
     }
 }

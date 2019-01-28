@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 
 class Login
 {
@@ -19,7 +18,7 @@ class Login
     {
         //判断是否登录
         if (Auth::guard('admin')->guest()) {
-            return redirect('aadmin/login');
+            return redirect('admin/login');
         }
         return $next($request);
     }
