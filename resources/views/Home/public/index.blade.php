@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="Keywords" content="hongfei,博客,shongfei博客,轻博客,shongfei,鸿飞，鸿飞博客"/>
+	<meta name="Keywords" content="hongfei,博客,shongfei博客,轻博客,shongfei,鸿飞,鸿飞博客"/>
 	<meta name="Description" content="hongfei博客"/>
 	<title>HongFei.Sun轻博客</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
