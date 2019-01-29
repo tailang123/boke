@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="Keywords" content="hongfei,博客,shongfei博客,轻博客,shongfei,鸿飞，鸿飞博客"/>
+	<meta name="Description" content="hongfei博客"/>
 	<title>HongFei.Sun轻博客</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{asset('bootstrap/dist/css/bootstrap.min.css')}}">
@@ -9,8 +11,7 @@
 	<link rel="stylesheet" href="{{asset('hhome/static/css/mian.css')}}">
 	<meta name="baidu-site-verification" content="Y913AzkCGm" />
 	<meta name="csrf-token" content="{{ csrf_token()}}">
-	<meta name="keywords" content="hongfei, 博客, shongfei博客, 轻博客, shongfei">
-	<meta name="description" content="hongfei博客">
+
 	<meta name="baidu-site-verification" content="Y913AzkCGm" />
 	<script src="{{asset('jquery-3.3.1.min.js')}}"></script>
 	<script src="{{asset('layer\layer\layer.js')}}"></script>
