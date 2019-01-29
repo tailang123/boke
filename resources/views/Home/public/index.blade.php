@@ -9,10 +9,9 @@
 	<link rel="stylesheet" href="{{asset('hhome/static/css/mian.css')}}">
 	<meta name="baidu-site-verification" content="Y913AzkCGm" />
 	<meta name="csrf-token" content="{{ csrf_token()}}">
-	<!-- 4. 关键词 -->
-	<meta name="keywords" content="hongfei, 博客, shongfei博客, 轻博客">
-	<!-- 5. 描述 -->
+	<meta name="keywords" content="hongfei, 博客, shongfei博客, 轻博客, shongfei">
 	<meta name="description" content="hongfei博客">
+	<meta name="baidu-site-verification" content="Y913AzkCGm" />
 	<script src="{{asset('jquery-3.3.1.min.js')}}"></script>
 	<script src="{{asset('layer\layer\layer.js')}}"></script>
 	<link rel="icon" href="/timg.ico" type="image/x-icon" />
