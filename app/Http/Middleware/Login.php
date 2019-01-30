@@ -18,7 +18,7 @@ class Login
     {
         //判断是否登录
         if (Auth::guard('admin')->guest()) {
-            return redirect('admin/login');
+            return redirect('aadmin/login');
         }
         return $next($request);
     }
